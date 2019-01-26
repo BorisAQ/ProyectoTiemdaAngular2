@@ -1,0 +1,51 @@
+<div class="container  ">
+
+    <div class="  col-lg-12 mt-4   ">
+      <div class="row bg-light rounded-top">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand"> Carrito de compras </a>
+          </nav>
+        <div>
+
+          <div class="card flex-row flex-wrap">
+                  <div class="card-header border-0 col-lg-4">
+                    <ul class="list-group">
+                      <li class="list-group-item disabled" *ngFor="let item of itemsCarrito">
+                        <div class="card flex-row flex-wrap">
+                          <div class="card-header border-0  ">
+                            <ul class="list-group align-items-center">
+                                <img class="card-img-top imagenCarrito" src="../../assets/images/{{item.imagen}}" alt="Card image cap" >
+                            </ul>
+                          </div>
+                          <div class="card-block px-2">
+                              <p class="card-title font-weight-bold">{{item.nombre}}</p>
+                              <p class="card-text">Unidades: {{item.cantidad}}</p>
+                          </div>
+                          <div class="w-100"></div>
+                          <div class="card-footer w-100 text-muted">
+                            <small>Subtotal: {{item.cantidad*item.precio|currency}} $</small>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                  <div class="card-block px-2 col-lg-8" >
+                      <h1 class="card-title">Total: {{totalCarrito|currency}}$</h1>
+                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                          <input type="radio" name="options" id="option1" autocomplete="off" checked style="width:100px!important" (click)="onCancelar()"> Cancelar
+                        </label>
+                        <label class="btn btn-secondary">
+                          <input type="radio" name="options" id="option2" autocomplete="off" style="width:100px!important" (click)="onPagar()"> Pagar
+                        </label>
+                      </div>
+                  </div>
+
+              </div>
+
+
+      <div>
+    <div>
+<div>

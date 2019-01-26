@@ -1,2 +1,7 @@
 Usuario: usuario@correo.com
 Contraseña: 12345
+
+El aplicativo publicado se encuentra en la carpeta dist.
+Se ha utilizado una base de datos JSON en FireBase de Google.
+
+Ruta GIT:https://github.com/BorisAQ/ProyectoTiemdaAngular2.git
